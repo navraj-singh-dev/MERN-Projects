@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+<h2>NovaFood Is A Food Ordering App.</h2>
+<h2>Tech Stack Used : MERN (MongoDb, Nodejs, Expressjs, Reactjs)</h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<hr>
 
-## Available Scripts
+<table>
+    <thead>
+        <tr>
+            <th>Key Features</th>
+            <th>NPM Packages Used</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Authentication/ Login/ SignUp</td>
+            <td>express-validator + bycryptjs + JWT</td>
+        </tr>
+        <tr>
+            <td>PassWords are encrypted first then stored in database</td>
+            <td>bycryptjs</td>
+        </tr>
+        <tr>
+            <td>Users are authenticated using JWT Tokens</td>
+            <td>jsonwebtoken</td>
+        </tr>
+        <tr>
+            <td>ODM is used for Model and Schemas Designing</td>
+            <td>Mongoose</td>
+        </tr>
+        <tr>
+            <td>Email, Password, Name in Login and Signup are validated first</td>
+            <td>express-validator</td>
+        </tr>
+        <tr>
+            <td>User's history about their orders is stored in database</td>
+            <td>N/A</td>
+        </tr>
+    </tbody>
+</table>
 
-In the project directory, you can run:
+<hr>
 
-### `npm start`
+<h3>Home</h3>
+<img src="https://github.com/navraj-singh-dev/MERN-Projects/blob/main/01%20major%20projects/mern_food_ordering/public/images%20for%20readme%20file/Home.png">
+<hr>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>My Cart</h3>
+<img src="https://github.com/navraj-singh-dev/MERN-Projects/blob/main/01%20major%20projects/mern_food_ordering/public/images%20for%20readme%20file/My%20Cart.png">
+<hr>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h3>Login</h3>
+<img src="https://github.com/navraj-singh-dev/MERN-Projects/blob/main/01%20major%20projects/mern_food_ordering/public/images%20for%20readme%20file/Login.png">
+<hr>
 
-### `npm test`
+<h3>Signup</h3>
+<img src="https://github.com/navraj-singh-dev/MERN-Projects/blob/main/01%20major%20projects/mern_food_ordering/public/images%20for%20readme%20file/Signup.png">
+<hr>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>Order History</h3>
+<img src="https://github.com/navraj-singh-dev/MERN-Projects/blob/main/01%20major%20projects/mern_food_ordering/public/images%20for%20readme%20file/User%20Order%20History.png">
+<hr>
 
-### `npm run build`
+<h3>Full Screen View</h3>
+<img src="https://github.com/navraj-singh-dev/MERN-Projects/blob/main/01%20major%20projects/mern_food_ordering/public/images%20for%20readme%20file/NovaFood.png">
+<hr>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h2>This was the whole project. Thanks For looking this far!</h2>
