@@ -49,29 +49,26 @@ export default function Home() {
                     setSearch(e.target.value);
                   }}
                 />
-                {/* <button className="btn btn-warning" type="submit">
-                  Search
-                </button> */}
               </div>
             </div>
 
             <div className="carousel-item active">
               <img
-                src="https://source.unsplash.com/random/640×426/?pizza"
+                src="https://images.unsplash.com/photo-1566843972142-a7fcb70de55a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="d-block w-100 image"
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
-                src="https://source.unsplash.com/random/641×426/?noodles"
+                src="https://images.unsplash.com/photo-1426869981800-95ebf51ce900?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="d-block w-100 image"
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
-                src="https://source.unsplash.com/random/640×426/?pasta"
+                src="https://images.unsplash.com/photo-1551782450-17144efb9c50?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="d-block w-100 image"
                 alt="..."
               />

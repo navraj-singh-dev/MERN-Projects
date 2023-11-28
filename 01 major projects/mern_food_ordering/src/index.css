@@ -17,9 +17,9 @@ code {
 }
 
 #carousel {
-  max-height: 700px;
+  max-height: 360px;
 }
 
 .image {
-  transform:translateY(-500px);
+  transform:translateY(-400px);
 }
