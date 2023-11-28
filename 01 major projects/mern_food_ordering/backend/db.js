@@ -5,12 +5,19 @@ const DB_Connector = async (db_connection_link) => {
 };
 
 const Fetch_Data = async () => {
-  const fetched_collection = await mongoose.connection.db.collection(
+  const food_items_collection = await mongoose.connection.db.collection(
     "food_items"
   );
+
+  const food_category_collection = await mongoose.connection.db.collection(
+    "food_category"
+  );
+
   const find_data_in_collection = async () => {
-    const data = await fetched_collection.find({}).toArray();
-    console.log(data);
+    const food_items_data = await food_items_collection.find({}).toArray();
+    const food_category_data = await food_category_collection.find({}).toArray();
+    global.food_items = food_items_data;
+    global.food_category = food_category_data;
   };
   find_data_in_collection();
 };

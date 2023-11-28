@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 const UserModel = require("../models/User");
 
 router.post(
-  "/createuser",
+  "/signup",
   [
     body("name", "Name must be alphabets only").isAlpha(),
     body(
@@ -16,8 +16,8 @@ router.post(
       "password",
       "password must be of 8 characters and must include mixture of lowercase, uppercase, special keyowords like '/', '#', '$', '_', '!'."
     )
-      .isLength({ min: 8 })
-      .isStrongPassword(),
+      .isLength({ min: 4 })
+      // .isStrongPassword(),
   ],
   async (req, res) => {
     const body = req.body;

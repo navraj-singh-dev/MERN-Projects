@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [credentials, setCredentials] = useState({
@@ -16,10 +16,12 @@ export default function Signup() {
     });
   };
 
+  let navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     // synthetic event
     e.preventDefault();
-    const response = await fetch("http://localhost:8080/api/createuser", {
+    const response = await fetch("http://localhost:8080/api/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,14 +38,17 @@ export default function Signup() {
 
     if (!output_of_response.success) {
       alert("Enter Valid Credentials!");
+    } else if (output_of_response) {
+      navigate("/login");
     }
   };
 
   return (
     <>
-      <div className="container">
+      <div className="container mt-5">
+      <h2 className="text-white text-center bg-dark border border-light p-2 rounded">Signup Page</h2>
         <form onSubmit={handleSubmit}>
-          <div className="mb-3">
+          <div className="mb-3 mt-5">
             <label htmlFor="exampleInputName1" className="form-label">
               Name
             </label>
@@ -99,7 +104,7 @@ export default function Signup() {
               onChange={fillCredentials}
             />
           </div>
-          <button type="submit" className="m-3 btn btn-success">
+          <button type="submit" className="m-3 btn btn-success" to="/login">
             Submit
           </button>
           <Link className="m-3 btn btn-primary" to="/login">

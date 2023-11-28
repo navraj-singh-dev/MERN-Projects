@@ -9,7 +9,7 @@ require("dotenv").config();
 const jwtSecret = process.env.JWT_SECRET;
 
 router.post(
-  "/loginuser",
+  "/login",
   [
     body(
       "email",
@@ -19,8 +19,8 @@ router.post(
       "password",
       "Password must have length equal to 8 characters and must be strong."
     )
-      .isLength({ min: 8 })
-      .isStrongPassword(),
+      .isLength({ min: 4 })
+      // .isStrongPassword(),
   ],
   async (req, res) => {
     const body = req.body;
@@ -54,7 +54,7 @@ router.post(
       // JWT Token Generation Here 
       const authToken = jwt.sign(data, jwtSecret);
 
-      return res.json({ success: true, authToken });
+      return res.json({ success: true, authToken, email });
     } catch (error) {
       console.log(error);
       res.json({ success: false });

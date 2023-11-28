@@ -19,9 +19,9 @@ export default function Login() {
   const handleSubmit = async (e) => {
     // synthetic event
     e.preventDefault();
-    
+
     // fetch
-    const response = await fetch("http://localhost:8080/api/loginuser", {
+    const response = await fetch("http://localhost:8080/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,17 +40,22 @@ export default function Login() {
     if (!output_of_response.success) {
       alert("Enter Valid Credentials!");
     } else if (output_of_response.success) {
+      localStorage.setItem("userEmail", output_of_response.email);
       localStorage.setItem("authToken", output_of_response.authToken);
       console.log(localStorage.getItem("authToken"));
+      console.log(localStorage.getItem("userEmail"));
       navigate("/");
     }
   };
 
   return (
     <div>
-      <div className="container">
+      <div className="container mt-5">
+        <h2 className="text-white text-center bg-dark border border-light p-2 rounded">
+          Login Page
+        </h2>
         <form onSubmit={handleSubmit}>
-          <div className="mb-3">
+          <div className="mb-3 mt-5">
             <label htmlFor="exampleInputEmail1" className="form-label">
               Email address
             </label>
