@@ -11,4 +11,7 @@ mongoose
   .then(() => console.log("MongoDB Connected..."))
   .catch((err) => console.log(err));
 
+// temporarily here... Routes
+app.use("/api/user", require("./routes/user.route.js"));
+
 app.listen(PORT, () => console.log(`Server Running on ${PORT}....`));
