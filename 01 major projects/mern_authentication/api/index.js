@@ -11,7 +11,9 @@ mongoose
   .then(() => console.log("MongoDB Connected..."))
   .catch((err) => console.log(err));
 
-// temporarily here... Routes
+// Middlewares & Routes
+app.use(express.json()); // server can now accept json request
 app.use("/api/user", require("./routes/user.route.js"));
+app.use("/api/auth", require("./routes/auth.route.js"));
 
 app.listen(PORT, () => console.log(`Server Running on ${PORT}....`));
