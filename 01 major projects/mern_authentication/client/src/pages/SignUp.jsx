@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     // event object is being passed as argument and target.id is coming from <input> tag's attribute.
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -30,6 +30,7 @@ export default function SignUp() {
         setError(true);
         return;
       }
+      navigate("/sign-in")
     } catch (error) {
       setLoading(false);
     }
