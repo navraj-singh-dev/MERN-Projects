@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  signInStart,
+  signInSuccess,
+  signInFailure,
+} from "../redux/user/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const { loading, error } = useSelector((state) => state.user);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     // event object is being passed as argument and target.id is coming from <input> tag's attribute.
@@ -16,8 +22,7 @@ export default function SignIn() {
     // e.preventDefault() prevent refresh on submit.
     e.preventDefault();
     try {
-      setLoading(true);
-      setError(false);
+      dispatch(signInStart());
       const res = await fetch("/api/auth/signin", {
         method: "POST",
         headers: {
@@ -26,14 +31,14 @@ export default function SignIn() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      setLoading(false);
       if (data.success === false) {
-        setError(true);
+        dispatch(signInFailure(data));
         return;
       }
-      navigate('/')
+      dispatch(signInSuccess(data));
+      navigate("/");
     } catch (error) {
-      setLoading(false);
+      dispatch(signInFailure(error));
     }
   };
 
@@ -72,7 +77,7 @@ export default function SignIn() {
 
       <div className="bg-red-800 mt-5 rounded-lg shadow-lg hover:shadow-amber-500/40">
         <p className="text-white text-lg text-center font-light antialiased">
-          {error && "Something Went Wrong 🥺"}
+          {error ? error.message || "Something Went Wrong 🥺" : ""}
         </p>
       </div>
     </div>
