@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 dotenv.config();
 const app = express();
@@ -13,6 +14,7 @@ mongoose
 
 // Middlewares & Routes
 app.use(express.json()); // server can now accept json request
+app.use(cookieParser()); // server can parse and use cookies
 app.use("/api/user", require("./routes/user.route.js"));
 app.use("/api/auth", require("./routes/auth.route.js"));
 app.use((err, req, res, next) => {
