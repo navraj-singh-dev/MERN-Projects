@@ -1,5 +1,18 @@
-# MERN-Projects
- All My Full Stack Major and Minor Projects that i will make in MERN Stack, will be stored here
+---
 
-<h3>Every Project HAS A README, please read it for clarification.</h3>
-<h3>Please Open Folders and then open project folder, then look at the README.</h3?
+# MERN-Projects
+
+### Important Note:
+I initially tried consolidating all my projects into a single repository for convenience. However, it became chaotic and challenging to manage.
+
+### New Approach:
+Moving forward, each project will have its own separate repository on GitHub. This change aims to maintain clarity and organization.
+
+### Repository Status:
+This repository will no longer be actively maintained. It will solely contain my first two MERN stack projects. Subsequent projects will have their dedicated repositories.
+
+### Purpose:
+This repository houses my initial two projects developed in the MERN stack.
+
+### Navigation Guide:
+- Explore individual folders to access project-specific README files for detailed insights.
